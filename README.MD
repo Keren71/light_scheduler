@@ -8,16 +8,20 @@ A real-time, web-based IoT dashboard to schedule and control a light using WebSo
 - 📡 MQTT integration using Mosquitto
 - 🔧 Arduino UNO-based relay switching
 
-## 🖼️ UI Preview
-![UI Preview](preview.png) *(replace with actual screenshot)*
 
 ## 📦 Project Structure
-├── index.html # Frontend UI ├── styles.css # Styling ├── script.js # WebSocket logic ├── server.py # WebSocket + MQTT logic ├── subscriber.py # MQTT to Serial to Arduino ├── README.md
+├── index.html         # Frontend UI  
+├── styles.css         # Styling  
+├── script.js          # WebSocket logic  
+├── server.py          # WebSocket + MQTT logic  
+├── subscriber.py      # MQTT to Serial to Arduino  
+├── README.md
+
 
 
 ## 🛠️ Setup Instructions
 
-### 1. Arduino Setup
+1. Arduino Setup
 
 Connect your relay module to the Arduino UNO:
 - VCC → 5V  
@@ -26,8 +30,6 @@ Connect your relay module to the Arduino UNO:
 
 Then upload this code using the Arduino IDE:
 
-
-```cpp
 int relayPin = 8;
 
 void setup() {
@@ -44,6 +46,7 @@ void loop() {
     else if (cmd == "OFF") digitalWrite(relayPin, HIGH);  // OFF
   }
 }
+
 2. Backend Setup
 Install required Python libraries:
 
